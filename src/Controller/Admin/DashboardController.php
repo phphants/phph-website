@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Admin;
 use App\Entity\Meetup;
+use App\Entity\Speaker;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -45,5 +46,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Admins', 'fas fa-user', Admin::class);
         yield MenuItem::linkToCrud('Meetups', 'fas fa-calendar', Meetup::class);
+        yield MenuItem::linkToCrud('Speakers', 'fas fa-user', Speaker::class);
     }
 }
