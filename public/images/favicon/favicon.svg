@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1080"
+     height="1080" viewBox="0 0 1080 1080" xml:space="preserve">
+    <g transform="matrix(1 0 0 1 540 540)" id="21628f11-c707-4412-8c37-e339945ce7f8">
+<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(21,237,163); fill-rule: nonzero; opacity: 1;"
+      vector-effect="non-scaling-stroke" x="-540" y="-540" rx="0" ry="0" width="1080" height="1080"/>
+</g>
+    <g transform="matrix(0.36 0 0 -0.36 540.3 540.3)">
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: #3d424a; fill-rule: nonzero; opacity: 1;"
+      vector-effect="non-scaling-stroke" transform=" translate(-1495, -1495)"
+      d="M 0 1495 L 0 0 L 1495 0 L 2990 0 L 2990 1495 L 2990 2990 L 1495 2990 L 0 2990 L 0 1495 z M 1730 2405 C 1839 2388 1984 2337 2097 2278 C 2277 2184 2432 2012 2522 1805 C 2594 1641 2623 1539 2656 1340 C 2675 1228 2678 812 2661 768 C 2651 742 2646 740 2595 740 L 2540 740 L 2540 803 C 2540 977 2498 1233 2454 1329 C 2418 1408 2356 1487 2302 1521 C 2249 1555 2188 1559 2134 1534 C 2002 1471 1881 1167 1844 808 L 1837 740 L 1650 740 L 1463 740 L 1457 798 C 1448 880 1415 961 1366 1017 C 1344 1044 1323 1066 1320 1066 C 1317 1067 1295 1078 1270 1091 C 1209 1123 1098 1123 1026 1092 C 969 1066 966 1066 976 1083 C 980 1090 979 1092 974 1087 C 969 1082 966 1075 966 1072 C 967 1068 952 1048 933 1026 C 888 976 842 879 828 801 L 816 740 L 644 740 L 472 740 L 467 773 C 464 790 450 852 436 909 C 366 1184 349 1433 389 1625 C 411 1735 462 1884 485 1910 C 493 1919 500 1930 500 1935 C 500 1941 583 2058 616 2099 C 618 2101 628 2097 637 2089 C 651 2079 653 2079 643 2089 C 634 2100 636 2108 653 2126 C 693 2169 824 2261 838 2255 C 845 2253 849 2254 846 2258 C 840 2268 988 2332 1080 2359 C 1149 2380 1266 2407 1315 2413 C 1396 2424 1643 2419 1730 2405 z"
+      stroke-linecap="round"/>
+</g>
+    <g transform="matrix(0.36 0 0 -0.36 651.94 405.59)">
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: #3d424a; fill-rule: nonzero; opacity: 1;"
+      vector-effect="non-scaling-stroke" transform=" translate(-1738.54, -1898.93)"
+      d="M 1625 2253 C 1588 2243 1550 2209 1527 2167 C 1507 2129 1505 2112 1505 1970 C 1506 1752 1542 1627 1623 1569 C 1660 1542 1671 1539 1716 1542 C 1814 1550 1815 1551 1901 1883 C 1942 2044 1974 2180 1972 2187 C 1970 2193 1938 2211 1902 2226 C 1849 2247 1815 2253 1740 2256 C 1688 2258 1636 2256 1625 2253 z"
+      stroke-linecap="round"/>
+</g>
+    <g transform="matrix(0.36 0 0 -0.36 785.51 379.77)">
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: #3d424a; fill-rule: nonzero; opacity: 1;"
+      vector-effect="non-scaling-stroke" transform=" translate(-2085, -1980.02)"
+      d="M 2046 2008 C 2037 1996 2030 1980 2030 1974 C 2030 1955 2065 1930 2091 1930 C 2123 1930 2140 1947 2140 1980 C 2140 1994 2135 2011 2128 2018 C 2108 2038 2063 2032 2046 2008 z"
+      stroke-linecap="round"/>
+</g>
+    <g transform="matrix(0 0 0 0 0.74 0.74)">
+<g style="">
+</g>
+</g>
+</svg>
