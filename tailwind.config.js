@@ -6,8 +6,12 @@ module.exports = {
     ],
     theme: {
         extend: {
+            backgroundImage: {
+                'hero-image': "url('/images/pexels-mikael-blomkvist-6476783.jpg')",
+            },
             colors: {
-                'brand-orange': '#f37642',
+                'brand-grey': '#3d424a',
+                'brand-green': '#15eda3',
                 'meetup-pink': '#f65858',
             },
             fontFamily: {

@@ -2,6 +2,7 @@
 <html lang="en-gb">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Welcome!{% endblock %}</title>
     {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
@@ -16,38 +17,27 @@
     {% endblock %}
 </head>
 <body>
-<header>
+<header class="bg-brand-grey">
     {% block header %}
-        <div class="container mx-auto py-4 flex place-content-between items-center">
-            <img src="{{ asset('images/phph-logo.svg') }}" alt="PHP Hampshire" width="160">
-            <a href="https://www.meetup.com/meetup-group-phphants/" target="_blank"
-               class="bg-meetup-pink text-white text-bold px-16 py-2 uppercase font-semibold rounded font-sans-200">Attend</a>
+        <div class="container mx-auto py-4 flex items-center justify-center md:place-content-between px-4">
+            <img src="{{ asset('images/phphants.png') }}" alt="PHP Hampshire" width="276">
+            <a href="{{ url('app_login') }}" target="_blank"
+               class="bg-black bg-opacity-25 text-white text-bold px-16 py-2 uppercase font-semibold rounded font-sans-200 hidden md:block">Log
+                In</a>
         </div>
-        <div class="bg-gray-200 py-16">
-            <div class="container mx-auto">
-                <div class="flex">
-                    <div>
-                        <div class="calendar">
-                            <div class="calendar-top bg-meetup-pink text-white rounded-t-lg px-4 py-2 w-48 text-lg text-center uppercase font-bold">
-                                Next Event
-                            </div>
-                            <div class="calendar-bottom bg-white w-48 h-36 rounded-b-lg flex items-center justify-center text-2xl">
-                                <pre class="font-sans "></pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="px-10 py-4">
-                        <h1 class="text-6xl">Welcome to PHP Hants</h1>
-                        <p class="text-xl max-w-3xl">PHP Hants is a monthly meetup aiming to help people learn, share
-                            knowledge
-                            and support the PHP & Tech community in Hampshire and the surrounding areas.</p>
-                    </div>
-                </div>
+        <div class="h-[50vh] md:h-[40vh] text-white bg-hero-image bg-cover bg-center flex">
+            <div class="text-container bg-gray-800 min-w-100 flex-1 bg-opacity-75 flex flex-col justify-center items-center text-center p-4">
+                <h1 class="font-semibold text-6xl pb-6">Welcome to PHP Hants</h1>
+                <p class="text-xl max-w-3xl">PHP Hants is a monthly meetup aiming to help people learn, share
+                    knowledge and support the PHP & Tech community in Hampshire and the surrounding areas.</p>
+                <a href="https://www.meetup.com/meetup-group-phphants/" target="_blank"
+                   class="bg-meetup-pink text-white tracking-wide px-16 py-2 uppercase rounded font-sans-200 mt-6">I
+                    want to attend!</a>
             </div>
         </div>
     {% endblock %}
 </header>
-<main class="container mx-auto">
+<main {% block main_attributes %}{% endblock %}>
     {% block body %}{% endblock %}
 </main>
 <footer></footer>

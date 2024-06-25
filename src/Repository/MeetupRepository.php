@@ -16,28 +16,17 @@ class MeetupRepository extends ServiceEntityRepository
         parent::__construct($registry, Meetup::class);
     }
 
-    //    /**
-    //     * @return Meetup[] Returns an array of Meetup objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('m')
-    //            ->andWhere('m.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('m.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    public function getNextMeetup(): Meetup|null
+    {
+        $entityManager = $this->getEntityManager();
 
-    //    public function findOneBySomeField($value): ?Meetup
-    //    {
-    //        return $this->createQueryBuilder('m')
-    //            ->andWhere('m.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+        $query = $entityManager->createQuery(
+            'SELECT m
+            FROM App\Entity\Meetup m
+            WHERE m.date > :date
+            ORDER BY m.date ASC'
+        )->setParameter('date', new \DateTime())->setMaxResults(1);
+
+        return $query->getOneOrNullResult();
+    }
 }
