@@ -2,6 +2,16 @@
 
 {% block title %}Welcome to PHP Hampshire!{% endblock %}
 
+{% macro organiser_html(organiser) %}
+    <li class="text-center flex flex-col items-center bg-white">
+        <div class="bg-organiser-{{ organiser.bg_name }} h-[250px] w-[200px] bg-cover rounded shadow-md mb-4">
+        </div>
+        <h3 class="text-xl font-semibold mb-2">{{ organiser.name }}</h3>
+        <p class="font-sans">{{ organiser.job_title }}</p>
+        <p class="font-sans text-sm font-semibold">{{ organiser.company }}</p>
+    </li>
+{% endmacro %}
+
 {% block body %}
     {% if next_meet is not null %}
         <section class="bg-gray-100 py-8 md:py-16">
@@ -20,10 +30,42 @@
                     <div class="talk-details p-8 lg:ml-8">
                         <h2 class="text-2xl font-semibold">{{ next_meet.name }}</h2>
                         <p class="text-md pt-3 ">{{ next_meet.description }}</p>
-                        <p class="text-md pt-4">By: {{ next_meet.speaker.name }}</p>
+                        <p class="text-md pt-4">By: <strong class="font-semibold">{{ next_meet.speaker.name }}</strong>
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
     {% endif %}
+
+    <section>
+        <div class="container mx-auto my-8">
+            <h2 class="text-2xl text-center font-semibold">The Team!</h2>
+            <p class="text-center max-w-4xl mx-auto px-10 mt-5">Nothing we do at PHP Hants would be possible without the
+                hard work of our volunteering team. If you have any questions, or concerns, please contact one of the
+                team directly, and we will be sure to do our best to help you.</p>
+        </div>
+        <div class="team mt-4">
+            <div class="container mx-auto py-6">
+                <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-center row-cols-auto">
+                    {% set organisers = [
+                        { name: "Richard Holloway", job_title: "Web Developer", company: "Page Refresh", bg_name: "richard" },
+                        { name: "Verity Maton", job_title: "Consultant", company: "The Goodwood Group", bg_name: "verity" },
+                        { name: "Lauren James", job_title: "Operations & Engagement Manager", company: "Spectrum IT Recruitment", bg_name: "lauren" },
+                        { name: "Jez Emery", job_title: "Lead Architect", company: "apex8 ltd", bg_name: "jez" }
+                    ] %}
+                    {% import _self as macros %}
+
+                    {% for organiser in organisers %}
+                        {{ macros.organiser_html(organiser) }}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="bg-brand-grey py-8 text-center">
+        <h2 class="text-4xl text-center font-semibold text-white pb-4">Sponsors</h2>
+        <p class="text-white">PHP Hants would like to thank our amazing sponsors for making the event possible.</p>
+        <a href="https://www.spectrumit.co.uk/?source=phphants.co.uk" target="_blank"><img src="{{ asset('images/spectrum_it_logo.png') }}" alt="Spectrum IT Recruitment" class="w-[300px] mx-auto"></a>
+    </section>
 {% endblock %}
