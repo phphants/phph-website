@@ -18,8 +18,8 @@
             <div class="container mx-auto max-w-100 max-w-2xl sm:max-w-4xl md:max-w-8xl lg:max-w-8xl ">
                 <div class="flex flex-col md:flex-row max-w-5xl mx-auto items-center">
                     <div class="calendar shadow-lg rounded-lg ml-0 md:ml-8 lg:ml-0">
-                        <div class="calendar-top bg-green-500 tracking-wider text-white rounded-t-lg px-4 py-2 w-48 text-lg text-center uppercase font-bold">
-                            Next Meetup
+                        <div class="calendar-top bg-brand-green tracking-wider text-white rounded-t-lg px-4 py-2 w-48 text-lg text-center uppercase font-bold">
+                            <span class="drop-shadow">Next Meetup</span>
                         </div>
                         <div class="calendar-bottom bg-white h-36 rounded-b-lg flex items-center justify-center text-5xl">
                             {{ next_meet.date | date('j') }}<sup
@@ -28,9 +28,16 @@
                         </div>
                     </div>
                     <div class="talk-details p-8 lg:ml-8">
-                        <h2 class="text-2xl font-semibold">{{ next_meet.name }}</h2>
-                        <p class="text-md pt-3 ">{{ next_meet.description }}</p>
-                        <p class="text-md pt-4">By: <strong class="font-semibold">{{ next_meet.speaker.name }}</strong>
+                        <h2 class="text-2xl font-semibold">{{ next_meet.name }} <span class="font-normal text-lg">by</span> {{ next_meet.speaker.name }}</h2>
+                        <p class="text-md pt-3 ">{{ next_meet.description }}
+                        <p class="text-md pt-4">
+                            Where: <a href="https://maps.app.goo.gl/CynXgM3esUZjPeCy7" target="_blank"><strong
+                                        class="font-semibold">HSDC Havant, New Road, Havant, Hampshire, PO9 1QL</strong></a>
+                        </p>
+                        <p class="text-md">
+                            When: <strong>Tuesday 9<sup>th</sup> July @ 18:00</strong>
+                        </p>
+                        <p class="text-md">
                         </p>
                     </div>
                 </div>
@@ -46,13 +53,13 @@
                 team directly, and we will be sure to do our best to help you.</p>
         </div>
         <div class="team mt-4">
-            <div class="container mx-auto py-6">
+            <div class="container mx-auto py-6 mb-6">
                 <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-center row-cols-auto">
                     {% set organisers = [
+                        { name: "Jez Emery", job_title: "Lead Architect", company: "apex8 ltd", bg_name: "jez" },
+                        { name: "Lauren James", job_title: "Operations & Engagement Manager", company: "Spectrum IT Recruitment", bg_name: "lauren" },
                         { name: "Richard Holloway", job_title: "Web Developer", company: "Page Refresh", bg_name: "richard" },
                         { name: "Verity Maton", job_title: "Consultant", company: "The Goodwood Group", bg_name: "verity" },
-                        { name: "Lauren James", job_title: "Operations & Engagement Manager", company: "Spectrum IT Recruitment", bg_name: "lauren" },
-                        { name: "Jez Emery", job_title: "Lead Architect", company: "apex8 ltd", bg_name: "jez" }
                     ] %}
                     {% import _self as macros %}
 
@@ -64,8 +71,23 @@
         </div>
     </section>
     <section class="bg-brand-grey py-8 text-center">
-        <h2 class="text-4xl text-center font-semibold text-white pb-4">Sponsors</h2>
-        <p class="text-white">PHP Hants would like to thank our amazing sponsors for making the event possible.</p>
-        <a href="https://www.spectrumit.co.uk/?source=phphants.co.uk" target="_blank"><img src="{{ asset('images/spectrum_it_logo.png') }}" alt="Spectrum IT Recruitment" class="w-[300px] mx-auto"></a>
+        <div class="container mx-auto flex flex-wrap justify-center p-4">
+            <div class="md:flex-1">
+                <h2 class="text-4xl text-center font-semibold text-white pb-4">Sponsors</h2>
+                <p class="text-white text-sm">PHP Hants would like to thank our amazing sponsors for making the event
+                    possible.</p>
+                <a href="https://www.spectrumit.co.uk/?source=phphants.co.uk" target="_blank"><img
+                            src="{{ asset('images/spectrum_it_logo.png') }}" alt="Spectrum IT Recruitment"
+                            class="w-[300px] mx-auto"></a>
+            </div>
+            <div class="md:flex-1">
+                <h2 class="text-4xl text-white text-center font-semibold pb-4">Join our Discord</h2>
+                <p class="text-white text-sm">Join our amazing community on our moderated Discord server</p>
+                <a href="https://discord.gg/2AU6kmTa3J" target="_blank">
+                    <img src="{{ asset('images/discord_logo.svg') }}" class="w-[300px] mt-14     mx-auto"
+                         alt="Join our Discord">
+                </a>
+            </div>
+        </div>
     </section>
 {% endblock %}

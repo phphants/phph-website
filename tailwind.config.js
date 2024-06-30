@@ -14,9 +14,9 @@ module.exports = {
             backgroundImage: {
                 'hero-image': "url('/images/pexels-mikael-blomkvist-6476783.jpg')",
                 'organiser-richard': "url('/images/richard_holloway.jpg')",
-                'organiser-verity': "url('/images/verity_maton.jpg')",
+                'organiser-verity': "url('/images/verity_maton.jpeg')",
                 'organiser-lauren': "url('/images/lauren_james.jpg')",
-                'organiser-jez': "url('/images/jez_emery.jpg')",
+                'organiser-jez': "url('/images/jez_emery.jpeg')",
             },
             colors: {
                 'brand-grey': '#3d424a',
