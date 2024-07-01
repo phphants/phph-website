@@ -1,1 +1,10 @@
 {% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block main %}
+    <h1>Welcome {{ user.username|humanize }}!</h1>
+    {% if meetup is not null %}
+        <p>Your next event: <em>{{ meetup.name }}</em> is in {{ countdown|date() }}!</p>
+    {% else %}
+        <p>No event has been scheduled</p>
+    {% endif %}
+{% endblock %}
