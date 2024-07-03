@@ -26,7 +26,7 @@ return [
         'version' => '1.4.5',
     ],
     'modularscale' => [
-        'version' => '1.0.2',
+        'version' => '2.0.1',
     ],
     'gray-percentage' => [
         'version' => '2.0.0',
@@ -59,13 +59,13 @@ return [
         'version' => '0.16.19',
     ],
     'decamelize' => [
-        'version' => '1.2.0',
+        'version' => '6.0.0',
     ],
     'lodash/isObject' => [
         'version' => '4.17.21',
     ],
     'convert-css-length' => [
-        'version' => '1.0.2',
+        'version' => '2.0.1',
     ],
     'parse-unit' => [
         'version' => '1.0.1',
