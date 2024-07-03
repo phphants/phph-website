@@ -35,6 +35,18 @@
             "ref": "b131e6cbfe1b898a508987851963fff485986285"
         }
     },
+    "phpstan/phpstan": {
+        "version": "1.11",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "5e490cc197fb6bb1ae22e5abbc531ddc633b6767"
+        },
+        "files": [
+            "phpstan.dist.neon"
+        ]
+    },
     "phpunit/phpunit": {
         "version": "9.6",
         "recipe": {
@@ -47,21 +59,6 @@
             ".env.test",
             "phpunit.xml.dist",
             "tests/bootstrap.php"
-        ]
-    },
-    "symfony/asset-mapper": {
-        "version": "6.4",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "main",
-            "version": "6.4",
-            "ref": "6c28c471640cc2c6e60812ebcb961c526ef8997f"
-        },
-        "files": [
-            "assets/app.js",
-            "assets/styles/app.css",
-            "config/packages/asset_mapper.yaml",
-            "importmap.php"
         ]
     },
     "symfony/console": {
@@ -181,6 +178,20 @@
             "config/routes/security.yaml"
         ]
     },
+    "symfony/stimulus-bundle": {
+        "version": "2.18",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "2.13",
+            "ref": "6acd9ff4f7fd5626d2962109bd4ebab351d43c43"
+        },
+        "files": [
+            "assets/bootstrap.js",
+            "assets/controllers.json",
+            "assets/controllers/hello_controller.js"
+        ]
+    },
     "symfony/translation": {
         "version": "6.4",
         "recipe": {
@@ -218,6 +229,9 @@
         "files": [
             "config/packages/uid.yaml"
         ]
+    },
+    "symfony/ux-turbo": {
+        "version": "v2.18.0"
     },
     "symfony/validator": {
         "version": "6.4",
@@ -259,8 +273,5 @@
             "package.json",
             "webpack.config.js"
         ]
-    },
-    "symfonycasts/tailwind-bundle": {
-        "version": "v0.5.1"
     }
 }

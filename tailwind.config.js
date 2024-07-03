@@ -5,6 +5,7 @@ module.exports = {
         "./templates/**/*.html.twig",
     ],
     safelist: [
+        'prose',
         {
             pattern: /bg-organiser-+/
         },
@@ -12,11 +13,11 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                'hero-image': "url('/images/pexels-mikael-blomkvist-6476783.jpg')",
-                'organiser-richard': "url('/images/richard_holloway.jpg')",
-                'organiser-verity': "url('/images/verity_maton.jpeg')",
-                'organiser-lauren': "url('/images/lauren_james.jpg')",
-                'organiser-jez': "url('/images/jez_emery.jpeg')",
+                'hero-image': "url('/assets/images/pexels-mikael-blomkvist-6476783.jpg')",
+                'organiser-richard': "url('/assets/images/richard_holloway.jpg')",
+                'organiser-verity': "url('/assets/images/verity_maton.jpeg')",
+                'organiser-lauren': "url('/assets/images/lauren_james.jpg')",
+                'organiser-jez': "url('/assets/images/jez_emery.jpeg')",
             },
             colors: {
                 'brand-grey': '#3d424a',
@@ -25,26 +26,10 @@ module.exports = {
             },
             fontFamily: {
                 sans: ['"Source Sans 3"', 'sans-serif'],
-            },
-            typography: {
-                prose: {
-                    maxWidth: 'unset'
-                },
-                DEFAULT: {
-                    css: {
-                        maxWidth: '200ch', // add required value here
-                    }
-                }
             }
         },
     },
-    safeList: [
-        'bg-organiser-richard',
-        {
-            pattern: /bg-organiser-(richard|verity|jez|lauren)/,
-        }
-    ],
     plugins: [
-        import('@tailwindcss/typography'),
+        require('@tailwindcss/typography'),
     ],
 }

@@ -87,7 +87,7 @@ class AdminCrudController extends AbstractCrudController
 
     private function hashPassword(): \Closure
     {
-        return function ($event) {
+        return function ($event): void {
             $form = $event->getForm();
             if (!$form->isValid()) {
                 return;

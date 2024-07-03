@@ -20,7 +20,7 @@ class GenericPageControllerTest extends WebTestCase
         $client = static::createClient();
 
         // Request the homepage
-        $client->request('GET', '/');
+        $client->request(\Symfony\Component\HttpFoundation\Request::METHOD_GET, '/');
 
         // Assert that the response status code is 200 (HTTP_OK)
         $this->assertEquals(Response::HTTP_OK, $client->getResponse()->getStatusCode());
