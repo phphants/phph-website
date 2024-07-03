@@ -26,6 +26,16 @@ module.exports = {
             fontFamily: {
                 sans: ['"Source Sans 3"', 'sans-serif'],
             },
+            typography: {
+                prose: {
+                    maxWidth: 'unset'
+                },
+                DEFAULT: {
+                    css: {
+                        maxWidth: '200ch', // add required value here
+                    }
+                }
+            }
         },
     },
     safeList: [
@@ -34,5 +44,7 @@ module.exports = {
             pattern: /bg-organiser-(richard|verity|jez|lauren)/,
         }
     ],
-    plugins: [],
+    plugins: [
+        import('@tailwindcss/typography'),
+    ],
 }
