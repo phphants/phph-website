@@ -9,6 +9,15 @@
         <h3 class="text-xl font-semibold mb-2">{{ organiser.name }}</h3>
         <p class="font-sans">{{ organiser.job_title }}</p>
         <p class="font-sans text-sm font-semibold">{{ organiser.company }}</p>
+        <a class="font-sans text-sm font-semibold"
+           target="_blank"
+           href="{{ organiser.linkedin_url }}">
+            <img
+                    src="{{ asset('images/linkedin_logo.svg') }}"
+                    class="w-[65px] mt-4"
+                    alt="{{ organiser.name }} LinkedIn"
+            />
+        </a>
     </li>
 {% endmacro %}
 
@@ -28,7 +37,8 @@
                         </div>
                     </div>
                     <div class="talk-details p-8 lg:ml-8">
-                        <h2 class="text-2xl font-semibold">{{ next_meet.name }} <span class="font-normal text-lg">by</span> {{ next_meet.speaker.name }}</h2>
+                        <h2 class="text-2xl font-semibold">{{ next_meet.name }} <span
+                                    class="font-normal text-lg">by</span> {{ next_meet.speaker.name }}</h2>
                         <p class="text-md pt-3 ">{{ next_meet.description }}
                         <p class="text-md pt-4">
                             Where: <a href="https://maps.app.goo.gl/CynXgM3esUZjPeCy7" target="_blank"><strong
@@ -56,10 +66,10 @@
             <div class="container mx-auto py-6 mb-6">
                 <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-center row-cols-auto">
                     {% set organisers = [
-                        { name: "Jez Emery", job_title: "Lead Architect", company: "apex8 ltd", bg_name: "jez" },
-                        { name: "Lauren James", job_title: "Operations & Engagement Manager", company: "Spectrum IT Recruitment", bg_name: "lauren" },
-                        { name: "Richard Holloway", job_title: "Web Developer", company: "Page Refresh", bg_name: "richard" },
-                        { name: "Verity Maton", job_title: "Consultant", company: "The Goodwood Group", bg_name: "verity" },
+                        { name: "Jez Emery", job_title: "Lead Architect", company: "apex8 ltd", bg_name: "jez", linkedin_url: "https://www.linkedin.com/in/jeremy-emery/" },
+                        { name: "Lauren James", job_title: "Operations & Engagement Manager", company: "Spectrum IT Recruitment", bg_name: "lauren", linkedin_url: "https://www.linkedin.com/in/lauren-james-a7280438/" },
+                        { name: "Richard Holloway", job_title: "Web Developer", company: "Page Refresh", bg_name: "richard", linkedin_url: "https://www.linkedin.com/in/richard-holloway-web-developer/" },
+                        { name: "Verity Maton", job_title: "Consultant", company: "The Goodwood Group", bg_name: "verity", linkedin_url: "https://www.linkedin.com/in/verity-maton-41383178/" },
                     ] %}
                     {% import _self as macros %}
 
@@ -84,8 +94,9 @@
                 <h2 class="text-4xl text-white text-center font-semibold pb-4">Join our Discord</h2>
                 <p class="text-white text-sm">Join our amazing community on our moderated Discord server</p>
                 <a href="https://discord.gg/2AU6kmTa3J" target="_blank">
-                    <img src="{{ asset('images/discord_logo.svg') }}" class="w-[300px] mt-14     mx-auto"
-                         alt="Join our Discord">
+                    <img src="{{ asset('images/discord_logo.svg') }}"
+                         class="w-[300px] mt-14 mx-auto"
+                         alt="Join our Discord"/>
                 </a>
             </div>
         </div>
