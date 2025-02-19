@@ -17,7 +17,6 @@ module.exports = {
                 'organiser-richard': "url('/assets/images/richard_holloway.jpg')",
                 'organiser-verity': "url('/assets/images/verity_maton.jpeg')",
                 'organiser-lauren': "url('/assets/images/lauren_james.jpg')",
-                'organiser-jez': "url('/assets/images/jez_emery.jpeg')",
             },
             colors: {
                 'brand-grey': '#3d424a',
