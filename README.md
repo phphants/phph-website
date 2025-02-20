@@ -1,4 +1,5 @@
 # Setup
+[![Symfony](https://github.com/phphants/phph-website/actions/workflows/symfony.yml/badge.svg)](https://github.com/phphants/phph-website/actions/workflows/symfony.yml)
 
 Easiest way to work with this project is to install the [Symfony CLI](https://symfony.com/download) tool.
 
