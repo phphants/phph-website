@@ -2,8 +2,8 @@
 
 namespace App\Tests\Controller;
 
-use App\Controller\GenericPageController;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -11,18 +11,24 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class GenericPageControllerTest extends WebTestCase
 {
-    /**
-     * Test for the index() method in the GenericPageController.
-     */
     public function testIndex(): void
     {
-        // Create a new client to browse the application
         $client = static::createClient();
-
-        // Request the homepage
-        $client->request(\Symfony\Component\HttpFoundation\Request::METHOD_GET, '/');
-
-        // Assert that the response status code is 200 (HTTP_OK)
+        $client->request(Request::METHOD_GET, '/');
         $this->assertEquals(Response::HTTP_OK, $client->getResponse()->getStatusCode());
+    }
+
+    public function testCodeOfConductPresent(): void
+    {
+        $client = static::createClient();
+        $client->request(Request::METHOD_GET, '/code-of-conduct/');
+        $this->assertEquals(Response::HTTP_OK, $client->getResponse()->getStatusCode());
+    }
+
+    public function testNotFound(): void
+    {
+        $client = static::createClient();
+        $client->request(Request::METHOD_GET, '/garbage-link');
+        $this->assertEquals(Response::HTTP_NOT_FOUND, $client->getResponse()->getStatusCode());
     }
 }
